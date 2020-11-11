@@ -34,26 +34,26 @@ public final class TestSportAdvancedEnumeration {
                 new Sport2SocialNetworkUserImpl<>("Davide", "Cassani", "dcassani", 53);
         final Sport2SocialNetworkUserImpl<User> falonso =
                 new Sport2SocialNetworkUserImpl<>("Fernando", "Alonso", "falonso", 34);
+        
         // ONCE YOU HAVE COMPLETED EVERY CLASS, UNCOMMENT THE INSTRUCTION BELOW
         // IN ORDER TO COMPLETE THE TEST
-        // alonso in a fan of soccer and bike and practices F1:
         
-	    falonso.addSport(Sport.F1); falonso.addSport(Sport.SOCCER);
+        // alonso in a fan of soccer and bike and practices F1:
+	    falonso.addSport(Sport.F1);
+	    falonso.addSport(Sport.SOCCER);
 	    falonso.addSport(Sport.BIKE);
 	     
 	    // TEST getIndividualSports()
-	    
 	    Set<Sport> individual = falonso.getIndividualSports();
 	    System.out.println("[Alonso] [Individual] [F1]: " + individual.contains(Sport.F1));
 	    System.out.println("[Alonso] [Individual] [not TENNIS]: " + !individual. contains(Sport.TENNIS));
 	     
 	    // Cassani practiced bike and loves F1 and MotoGP:
-	    
-	    dcassani.addSport(Sport.BIKE); dcassani.addSport(Sport.F1);
+	    dcassani.addSport(Sport.BIKE);
+	    dcassani.addSport(Sport.F1);
 	    dcassani.addSport(Sport.MOTOGP);
 	     
 	    // TEST getIndividualSports()
-	    
 	    individual = dcassani.getIndividualSports();
 	    System.out.println("[Cassani] [Individual] [F1]: " +
 	    		individual.contains(Sport.F1));
@@ -61,10 +61,8 @@ public final class TestSportAdvancedEnumeration {
 	    		!individual.contains(Sport.TENNIS));
 	     
 	    // TEST getSportPracticedInPlace(Place)
-	    
 	    Set<Sport> sportsInPlace = dcassani.getSportPracticedInPlace(Place.OUTDOOR);
 	    System.out.println("[Cassani] [Outdoor] [no. sports==3]: " +
 	    		(sportsInPlace.size()==3));
-         
     }
 }
