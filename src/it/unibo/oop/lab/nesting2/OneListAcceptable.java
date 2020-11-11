@@ -17,8 +17,8 @@ public class OneListAcceptable<T> implements Acceptable<T> {
 	private final List<T> acceptableList;
 	
 	/**
-	 * Builds a new {@link OneListAcceptable} with a {@link List} of elements
-	 * that will used by the {@link Acceptor}.
+	 * Builds a new {@link OneListAcceptable} instance with a {@link List}
+	 * of elements that will be used by the {@link Acceptor}.
 	 * 
 	 * @param acceptable
 	 * 			{@link List} containing a sequence of acceptable elements.
