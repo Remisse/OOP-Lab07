@@ -50,9 +50,9 @@ public enum Sport {
 	
 	public String toString() {
 		return this.actualName + " [place: "
-							   + this.getPlace()
-							   + " - individual sport: "
-							   + this.isIndividualSport()
+							   + this.place
+							   + " - team members: "
+							   + this.noTeamMembers
 							   + "]";
 	}
 }
